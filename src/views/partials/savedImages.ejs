@@ -1,0 +1,19 @@
+<%if(pins.length > 0){%>
+<div class="grid-container">
+    
+    <% pins.forEach(function(pin) { %>
+        <% var classes = ['small-card', 'med-card', 'large-card']; %>
+        <% var randomClass = classes[Math.floor(Math.random() * classes.length)]; %>
+        <div class="<%= randomClass %> image-card">
+            <img class="card-image" src="/uploads/<%= pin.image %>" alt="">
+            <figcaption>The water was freezing!</figcaption>
+            <button class="save-btn" id="<%= pin._id %>" onclick="unSave(event)">Unsave</button>
+        </div>
+    <% }); %>
+   
+  </div>
+  <%}else{%>
+    <div class="noImages">
+        <p>You haven't saved any Pins yet</p>
+    </div>
+<%}%>

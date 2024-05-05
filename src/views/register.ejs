@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pintrest Clone</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+  <div class="registration-container">
+    <h2>Sign up to see more</h2>
+    <form method="post" action="/user/register">
+      <label for="name">Name</label>
+      <input type="text" name="fullname" id="fullname" placeholder="Full name" required>
+
+      <label for="name">Username</label>
+      <input type="text" name="username" id="username" placeholder="Username" required>
+      
+      <label for="email">Email address</label>
+      <input type="email" id="email" name="email" placeholder="Email address" required>
+      
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Create a password" required>
+      
+      <label for="dob" >Date of birth</label>
+      <input type="date" name="dob" id="dob" required>
+      
+      <% if(error){ %>
+        <p style="color: red; margin: 0; margin-bottom: 2px; padding: 0;"><%=error%></p>
+      <% } %>
+      
+      <input type="submit" value="Continue">
+    </form>
+
+    <p class="alternate-action">
+      By continuing, you agree to Pinterest's Terms of Service and acknowledge that you've read our Privacy Policy. Notice at collection.
+      <br>
+      Already a member? <a href="/user/login">Log in</a> 
+    </p>
+  </div>
+</body>
+</html>

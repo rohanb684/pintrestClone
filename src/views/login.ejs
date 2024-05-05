@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pintrest Clone</title>
+  <link rel="stylesheet" href="/stylesheets/loginstyle.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-logo">
+      <img src="https://i.pinimg.com/originals/d3/d1/75/d3d175e560ae133f1ed5cd4ec173751a.png" alt="Pinterest Logo">
+    </div>
+    <h2>Log in to see more</h2>
+    <form method="post" action="/user/login">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" placeholder="username">
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Password">
+      <% if(error){ %>
+        <p style="color: red; margin: 0; margin-bottom: 2px; padding: 0;"><%=error%></p>
+      <% } %>
+      <input type="submit" value="Log in">
+    </form>
+    <p>
+      By continuing, you agree to Pinterest's Terms of Service and acknowledge that you've read our Privacy Policy. Notice at collection.
+    </p>
+    <p>
+      Not on Pinterest yet? <a href="/user/register">Sign up</a><br>
+    </p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+{
+  "name": "pintrestclone_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "express-ejs-layouts": "^2.5.1",
+    "express-session": "^1.18.0",
+    "http-errors": "~1.6.3",
+    "iconv-lite": "^0.6.3",
+    "mongodb": "^6.5.0",
+    "mongoose": "^8.3.2",
+    "morgan": "~1.9.1",
+    "multer": "^1.4.5-lts.1",
+    "passport": "^0.7.0",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^8.0.0",
+    "uuid": "^9.0.1",
+    "dotenv": "^16.4.5"
+  }
+  ,
+  "author": "",
+  "license": "ISC"
+}

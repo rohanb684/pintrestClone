@@ -1,0 +1,21 @@
+<div class="grid-container">
+    <% if(pins.length > 0) { %>
+    <% pins.forEach(function(pin) { %>
+      <% var classes = ['small-card', 'med-card', 'large-card']; %>
+      <% var randomClass = classes[Math.floor(Math.random() * classes.length)]; %>
+      <div class="<%= randomClass %> image-card">
+          <img class="card-image" src="/uploads/<%= pin.image %>" alt="">
+          <figcaption><%=pin.title %></figcaption>
+          <% if (savedPinIds.includes(pin._id.toString())) { %>
+              <button class="saved-btn" id="<%= pin._id %>">Saved</button>
+          <% } else { %>
+              <button class="save-btn" onclick="savePin(event)" id="<%= pin._id %>">Save</button>
+          <% } %>
+      </div>
+  <% }); %>
+  <% } else { %>
+    <div id="noImages">
+        <p>No Pins available</p>
+      </div>
+    <% } %>
+  </div>
